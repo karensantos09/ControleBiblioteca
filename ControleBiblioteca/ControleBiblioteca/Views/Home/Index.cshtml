@@ -2,74 +2,117 @@
     ViewData["Title"] = "Biblioteca Virtual";
 }
 
-<div class="text-center">
-	<h1>Sejam bem-vindos a biblioteca virtual! 📚 </h1>
-	<p>Escolha uma das opções do menu para navegar.</p>
+<header id="header"></header>
+<nav id="menu"></nav>
 
-	<footer id="footer"></footer>
-
-	<style>
-		body {
-			font-family: 'Poppins', sans-serif;
-			background-color: #f4f6f9;
-			margin: 0;
-			padding: 0;
-		}
-
-		header {
-			background-color: #B7B1F2;
-			color: white;
-			text-align: center;
-			padding: 20px 0;
-			font-size: 24px;
-			font-weight: bold;
-			letter-spacing: 1px;
-		}
-
-		main {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			gap: 20px;
-			padding: 30px;
-		}
-
-		.card {
-			background-color: white;
-			border-radius: 10px;
-			box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-			padding: 20px;
-			text-align: center;
-			transition: transform 0.2s, box-shadow 0.2s;
-		}
-
-			.card:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-			}
-
-			.card h2 {
-				color: #6E66D1;
-				font-size: 22px;
-				margin-bottom: 10px;
-			}
-
-			.card p {
-				color: #555;
-				font-size: 16px;
-				margin-bottom: 15px;
-			}
-
-		canvas {
-			max-width: 100%;
-			height: 150px;
-		}
-
-		footer {
-			text-align: center;
-			padding: 15px;
-			color: #777;
-			background-color: #fff;
-			border-top: 1px solid #ddd;
-		}
-	</style>
+<div class="text-center titulo">
+    <h1>Sejam bem-vindos à biblioteca virtual! 📚</h1>
+    <p>Escolha uma das opções do menu para navegar.</p>
 </div>
+
+<div class="painel-central">
+    <div class="area-roxa"></div>
+
+    <div class="botoes">
+        <a href="/Livros" class="btn"> 
+            📘 Livros
+        </a>
+
+        <a href="/Alunos" class="btn">
+            🧑‍🎓 Alunos
+        </a>
+
+        <a href="/Tarefas" class="btn">
+            📝 Tarefas
+        </a>
+
+        <a href="/Notas" class="btn">
+            📊 Notas
+        </a>
+    </div>
+</div>
+
+<footer id="footer"></footer>
+
+
+<style>
+
+    body {
+        background: #f3e9dd; /* marrom claro */
+    }
+
+    .titulo {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+        .titulo h1 {
+            font-size: 34px; /* maior */
+            color: #4b2e2e; /* marrom escuro suave */
+            font-weight: bold;
+        }
+
+    .painel-central {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .area-roxa {
+        width: 380px;
+        height: 520px;
+        background: linear-gradient(135deg, #593a2f, #7a5a4a); /* marrom escuro degradê */
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .botoes {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .btn {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 15px;
+        background: #ffffff;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #4b2e2e;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        transition: 0.2s;
+    }
+
+        .btn:hover {
+            background: #f0e4d8;
+            transform: scale(1.03);
+        }
+
+ (max-width: 600px) {
+        .area-roxa {
+            width: 300px;
+            height: 450px;
+        }
+
+        .botoes {
+            width: 220px;
+        }
+
+        .btn {
+            font-size: 16px;
+        }
+
+        .titulo h1 {
+            font-size: 28px;
+        }
+</style>
