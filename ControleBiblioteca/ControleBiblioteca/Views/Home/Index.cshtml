@@ -14,21 +14,19 @@
     <div class="area-roxa"></div>
 
     <div class="botoes">
-        <a href="/Livros" class="btn"> 
-            📘 Livros
-        </a>
+        
+        <a asp-contoller="nav-link text-dark btn" asp-area="" asp-controller="Livros" asp-action="Index" class="btn">📘 Livros</a>  
+        
 
-        <a href="/Alunos" class="btn">
-            🧑‍🎓 Alunos
-        </a>
+        <a class="nav-link text-dark btn" asp-area="" asp-controller="Clientes" asp-action="Index" class="btn"> 📊 Clientes</a>
+        <a class="nav-link text-dark btn" asp-area="" asp-controller="Produtos" asp-action="Index" class="btn">  📜  Produtos</a>
 
-        <a href="/Tarefas" class="btn">
-            📝 Tarefas
-        </a>
+        <a class="nav-link text-dark btn" asp-area="" asp-controller="Alunos" asp-action="Index" class="btn">🧑‍🎓 Alunos</a>
+        <a class="nav-link text-dark btn" asp-area="" asp-controller="Tarefas" asp-action="Index" class="btn">🗂️ Tarefas</a>
+        <a class="nav-link text-dark btn" asp-area="" asp-controller="Gastos" asp-action="Index" class="btn"> 💸 Gastos</a>
+        <a class="nav-link text-dark btn" asp-area="" asp-controller="Notas" asp-action="Index" class="btn"> ✅ Notas</a>
 
-        <a href="/Notas" class="btn">
-            📊 Notas
-        </a>
+
     </div>
 </div>
 
@@ -38,7 +36,7 @@
 <style>
 
     body {
-        background: #f3e9dd; /* marrom claro */
+        background: #f3e9dd; 
     }
 
     .titulo {
@@ -47,8 +45,8 @@
     }
 
         .titulo h1 {
-            font-size: 34px; /* maior */
-            color: #4b2e2e; /* marrom escuro suave */
+            font-size: 34px; 
+            color: #4b2e2e; 
             font-weight: bold;
         }
 
@@ -64,7 +62,7 @@
     .area-roxa {
         width: 380px;
         height: 520px;
-        background: linear-gradient(135deg, #593a2f, #7a5a4a); /* marrom escuro degradê */
+        background: linear-gradient(135deg, #593a2f, #7a5a4a); 
         border-radius: 20px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }

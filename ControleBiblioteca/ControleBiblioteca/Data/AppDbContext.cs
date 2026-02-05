@@ -14,12 +14,25 @@ namespace ControleBiblioteca.Data
         public DbSet<Gasto> Gastos { get; set; }
         public DbSet<Livro> Livros { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Genero> Genero { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             // Configurações adicionais do modelo podem ser feitas aqui
+            modelBuilder.Entity<Tarefa>().ToTable("Tarefas");
+            modelBuilder.Entity<Aluno>().ToTable("Alunos");
+            modelBuilder.Entity<Nota>().ToTable("Notas");
+            modelBuilder.Entity<Produto>().ToTable("Produtos");
+            modelBuilder.Entity<Cliente>().ToTable("Clientes");
+            modelBuilder.Entity<Gasto>().ToTable("Gastos");
+            modelBuilder.Entity<Livro>().ToTable("Livros");
+            modelBuilder.Entity<Usuario>().ToTable("Usuarios");
+            modelBuilder.Entity<Genero>().ToTable("Genero");
+
+
         }
-        public DbSet<ControleBiblioteca.Models.Genero> Genero { get; set; } = default!;
+
     }
 }

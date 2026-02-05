@@ -17,6 +17,7 @@ namespace ControleBiblioteca.Controllers
         public TarefasController(AppDbContext context)
         {
             _context = context;
+
         }
 
         // GET: Tarefas

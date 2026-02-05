@@ -22,7 +22,7 @@ namespace ControleBiblioteca.Controllers
         // GET: Livros
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Livros.Include(l => l.Usuario);
+            var appDbContext = _context.Livros.Include(l => l.Genero);
             return View(await appDbContext.ToListAsync());
         }
 
@@ -35,7 +35,7 @@ namespace ControleBiblioteca.Controllers
             }
 
             var livro = await _context.Livros
-                .Include(l => l.Usuario)
+                .Include(l => l.Genero)
                 .FirstOrDefaultAsync(m => m.LivroId == id);
             if (livro == null)
             {
@@ -131,7 +131,7 @@ namespace ControleBiblioteca.Controllers
             }
 
             var livro = await _context.Livros
-                .Include(l => l.Usuario)
+                .Include(l => l.Genero)
                 .FirstOrDefaultAsync(m => m.LivroId == id);
             if (livro == null)
             {

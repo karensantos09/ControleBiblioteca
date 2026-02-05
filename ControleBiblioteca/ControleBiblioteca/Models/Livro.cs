@@ -10,6 +10,6 @@ namespace ControleBiblioteca.Models
         public DateTime? DataEmprestimo { get; set; }
         public DateTime? DataDevolucao { get; set; }
         public int? UsuarioId { get; set; }
-        public Usuario Usuario { get; set; }
+        public Genero Genero { get; set; }
     }
 }
